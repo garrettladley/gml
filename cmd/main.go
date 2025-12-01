@@ -11,7 +11,7 @@ import (
 
 func main() {
 	var path string
-	flag.StringVar(&path, "path", ".", "path to scaffold in (default \".\"")
+	flag.StringVar(&path, "path", ".", "path to scaffold in (default \".\")")
 	flag.Parse()
 
 	for name, data := range gml.ScaffoldFiles {
