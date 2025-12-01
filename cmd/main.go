@@ -9,12 +9,6 @@ import (
 	"github.com/garrettladley/gml"
 )
 
-const (
-	gitignore = ".gitignore"
-	golangci  = ".golangci.yml"
-	makefile  = "Makefile"
-)
-
 func main() {
 	var path string
 	flag.StringVar(&path, "path", ".", "path to scaffold in (default \".\"")
@@ -30,7 +24,7 @@ func main() {
 
 func createFile(basePath string, name string, data []byte) error {
 	path := filepath.Join(basePath, name)
-	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+	if err := os.MkdirAll(filepath.Dir(path), 0o750); err != nil {
 		return err
 	}
 	return os.WriteFile(path, data, 0o644)
