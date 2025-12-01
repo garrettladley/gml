@@ -2,6 +2,12 @@
 
 Meta CLI to create repos with my preferred infrastructure
 
+## Usage
+
+```console
+go run cmd/main.go -path foo
+```
+
 ## TODOs
 
 - [ ] `git add -p` style diffing capability
